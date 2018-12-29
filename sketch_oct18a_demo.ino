@@ -12,8 +12,8 @@
 
 #include <ESP8266HTTPClient.h>
 
-const char* ssid = "mkS!ngh";
-const char* password = "manish@6588";
+const char* ssid = "ssid";
+const char* password = "pword";
  
 void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
@@ -32,8 +32,8 @@ void loop() {
     HTTPClient http;  //Declare an object of class HTTPClient
     HTTPClient http2;
     
-    http.begin("http://homeautomation-env.48fi6jjnfj.ap-south-1.elasticbeanstalk.com/Arduino/1/1");
-    http2.begin("http://homeautomation-env.48fi6jjnfj.ap-south-1.elasticbeanstalk.com/Arduino/1/2");
+    http.begin("http://homeautomation-env.48*****fj.ap-south-1.elasticbeanstalk.com/Arduino/1/1");
+    http2.begin("http://homeautomation-env.48*****fj.ap-south-1.elasticbeanstalk.com/Arduino/1/2");
     
     int httpCode = http.GET();
     int httpCode2 = http2.GET();
