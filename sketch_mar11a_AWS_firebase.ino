@@ -9,15 +9,14 @@
 #define dht_apin D2
 
 // ssid and pass to connect WiFi AccessPoint 
-const char* ssid = "mk•$!ngh";
-const char* password = "password";
+const char* ssid = "wifi_name";
+const char* password = "wifi_password";
 // Server details
 const int httpsPort = 443;
-const char* host = "home-automation-25554.firebaseio.com";
-const char* user_id = "GjkGPf9XZ3PSg4uAs8TZccgHlJu1";
+const char* host = "***********.firebaseio.com";
+const char* user_id = "********************";
 // WiFiClientSecure class to create TLS connection
 WiFiClientSecure client;
-//const char* fingerprint = "CF 05 98 89 CA FF 8E D8 5E 5C E0 C2 E4 F7 E6 C3 C7 50 DD 5C";// SHA1 fingerprint of the certificate
 // Json to store fetched data
 StaticJsonBuffer<500> jsonBuffer;
 StaticJsonBuffer<70> jsonBuffer_sensors;
@@ -185,7 +184,7 @@ void getAllDeviceStatus(){
     int s=0,p1,p2,p3,e;
     String s0,s1,s2,s3;
     HTTPClient http;
-    http.begin("http://default-environment.bmzjtxmbet.ap-south-1.elasticbeanstalk.com/HA/getAllDeviceStatus/GjkGPf9XZ3PSg4uAs8TZccgHlJu1");
+    http.begin("http://default-environment.b*****et.ap-south-1.elasticbeanstalk.com/HA/getAllDeviceStatus/Gj****************gHlJu1");
     int httpCode = http.GET();
     if(httpCode > 0) {
             // HTTP header has been send and Server response header has been handled
@@ -280,7 +279,7 @@ void setSensorStatus(String v){
 //    Serial.println(line_put);
 //*********************************************
     HTTPClient http;
-    http.begin("http://default-environment.bmzjtxmbet.ap-south-1.elasticbeanstalk.com/HA/setSensorStatus");
+    http.begin("http://default-environment.bm******et.ap-south-1.elasticbeanstalk.com/HA/setSensorStatus");
     http.addHeader("Content-Type", "application/json");  //Specify content-type header
     int httpCode = http.POST(v); 
 //    if(httpCode > 0) {
